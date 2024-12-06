@@ -1,0 +1,30 @@
+.poster{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    
+  }
+  .full_name{
+    margin-top: 0.7rem;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  .verificated{
+    aspect-ratio: 1/1;
+    height: 28px;
+  }
+  .job_title_and_country{
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+  }
+  .avatar{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+  

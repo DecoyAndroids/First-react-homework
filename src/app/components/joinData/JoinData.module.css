@@ -1,0 +1,11 @@
+.joinDataInfo{
+    display: flex;
+  
+  }
+  .joinData{
+    margin:2px;
+    font-size: 1.3rem;
+    line-height: 1;
+    font-weight: 200;
+    letter-spacing: -0.025em;
+  }
