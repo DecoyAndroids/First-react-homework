@@ -1,14 +1,13 @@
 import React, { createElement } from "react";
-
+import styles from './Skills.module.css'
 
 export interface SkillsProps{
-    styles:React.CSSProperties;
-    skills:Array<object>;
+    skills:Array<{id:number,skill:string}>;
 }
 
 
 export const Skills: React.FC<SkillsProps> = (props) => {
-    const {skills,styles} = {...props}
+    const {skills} = {...props}
     return (
         <div>
             <div className={styles.skills_title}>
@@ -16,9 +15,9 @@ export const Skills: React.FC<SkillsProps> = (props) => {
             </div>
             <br/>
             <div className={styles.skills}>
-                {skills.map(function(skill){
+                {skills.map((skill)=>{
                     return(
-                        <div className={styles.skill}>
+                        <div key={skill.id} className={styles.skill}>
                             {skill.skill}
                         </div>
                     )   

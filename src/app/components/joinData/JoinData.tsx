@@ -1,23 +1,23 @@
 import React, { createElement } from "react";
-import { string } from "zod";
+import styles from './JoinData.module.css'
+import {StaticImageData} from 'next/image'
+import Image from  'next/image'
 
 
 export interface JoinDataProps{
-    styles:React.CSSProperties;
     data:string;
-    clockSrc:string;
+    clockSrc:StaticImageData;
 }
 
 
 export const JoinData: React.FC<JoinDataProps> = (props) => {
-    const {data,styles,clockSrc} = {...props}
+    const {data,clockSrc} = {...props}
     return (
         <div className={styles.joinDataInfo}>
-        <img className={styles.joinDataClock} src={clockSrc}/>
-        <div className={styles.joinData}>
-            
+        <Image src={clockSrc} width={26} alt='icon of clock'/>
+            <p className={styles.joinData}>
             Joined on {data}
-        </div>
+            </p>
         </div>
     );
   }

@@ -1,27 +1,26 @@
 import React from "react";
-import {Avatar} from "../avatar/Avatar"
+import styles from './Poster.module.css'
+import Image from 'next/image'
+import {StaticImageData} from  'next/image'
 
 export interface PosterProps{
-    avatarSrc:string;
+    avatarSrc:StaticImageData;
     verificatedSrc:string;
-    styles:React.CSSProperties;
     full_name:string;
     job_title:string;
     country:string;
 }
 export const Poster: React.FC<PosterProps> = (props) => {
-    const {avatarSrc,verificatedSrc,styles,full_name,job_title,country} = {...props}
+    const {avatarSrc,verificatedSrc,full_name,job_title,country} = {...props}
     return (
         <div className = {styles.poster}>
-            <Avatar avatarSrc={avatarSrc} styles={styles}/>
-            <div className={styles.full_name}> 
-                {full_name} <img src={verificatedSrc} className={styles.verificated}/>
+            <Image src={avatarSrc} width={241} alt ='avatar of user' className={styles.avatar} />
+            <div className={styles.full_name}>  
+                {full_name} <Image src={verificatedSrc} width={24} alt ='point of verificate' className={styles.verificatedSrc} />
             </div>
-            <br/>
             <div className={styles.job_title_and_country}>
                 {job_title}, {country}
             </div>
-            <br/>
         </div>
     );
   }
