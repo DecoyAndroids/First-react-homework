@@ -5,7 +5,7 @@ import {StaticImageData} from  'next/image'
 
 export interface PosterProps{
     avatarSrc:StaticImageData;
-    verificatedSrc:string;
+    verificatedSrc:StaticImageData;
     full_name:string;
     job_title:string;
     country:string;
@@ -14,7 +14,10 @@ export const Poster: React.FC<PosterProps> = (props) => {
     const {avatarSrc,verificatedSrc,full_name,job_title,country} = {...props}
     return (
         <div className = {styles.poster}>
-            <Image src={avatarSrc} width={241} alt ='avatar of user' className={styles.avatar} />
+            <Image src={avatarSrc} 
+                width={241}
+                alt ='avatar of user' 
+                className={styles.avatar} />
             <div className={styles.full_name}>  
                 {full_name} <Image src={verificatedSrc} width={24} alt ='point of verificate' className={styles.verificatedSrc} />
             </div>

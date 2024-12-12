@@ -1,0 +1,31 @@
+.changeButton{
+    padding: 0.5rem 1rem;
+    background: white;
+    border-color: rgb(244, 242, 242);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    
+}
+.changeButton:hover{
+    cursor: pointer;
+    background: rgb(34, 34, 34);
+    color:aliceblue;
+}
+
+.changeButtonDark{
+    padding: 0.5rem 1rem;
+    background: rgb(34, 34, 34);
+    border-color: rgb(42, 42, 42);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    color:white;
+    
+}
+.changeButtonDark:hover{
+    cursor: pointer;
+    background: rgb(213, 213, 213);
+    color:black;
+}
+.changeButtonBlock{
+    display: flex;
+}
