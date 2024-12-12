@@ -9,11 +9,10 @@ export interface SkillsProps{
 export const Skills: React.FC<SkillsProps> = (props) => {
     const {skills} = {...props}
     return (
-        <div>
+        <div className={styles.skills_block}>
             <div className={styles.skills_title}>
                 SKILLS
             </div>
-            <br/>
             <div className={styles.skills}>
                 {skills.map((skill)=>{
                     return(
