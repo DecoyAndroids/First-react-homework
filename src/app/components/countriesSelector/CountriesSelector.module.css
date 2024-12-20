@@ -1,0 +1,85 @@
+.CountriesSelectorBlock{ 
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    margin:auto;
+    margin-top:10px;
+    font-size: 1.3rem;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 30px;
+    width: 60%;
+}
+.CountriesSelectorBlockDark{ 
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    margin:auto;
+    margin-top:10px;
+    font-size: 1.3rem;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px 10px 10px 10px;
+    padding: 30px;
+    width: 60%;
+}
+.picAndCountryName{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    margin: auto;
+    font-weight: 700;
+}
+.picAndCountryNameDark{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    margin: auto;
+    font-weight: 700;
+}
+.ChangeCountryButton{
+    padding: 0.5rem 1rem;
+    background: rgb(231, 231, 231);
+    border-color: rgb(244, 242, 242);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    white-space: nowrap;
+    margin: auto;
+    width: 12rem;
+}
+.ChangeCountryButton:hover{
+    cursor: pointer;
+}
+
+.ChangeCountryButtonDark{
+    padding: 0.5rem 1rem;
+    background: rgb(34, 34, 34);
+    border-color: rgb(42, 42, 42);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    color:white;
+    white-space: nowrap;
+    margin: auto;
+    width: 12rem;
+    
+}
+.ChangeCountryButtonDark:hover{
+    cursor: pointer;
+}
+
+.countryNameInfo{
+    margin: auto;
+    display: flex;
+}
+.countryNameInfoDark{
+    margin: auto;
+    display: flex;
+}
+
+.countryInfo{
+    display: flex;
+    margin: 0px;
+}
+.countryInfoDark{
+    display: flex;
+    margin: 0px;
+}

@@ -1,10 +1,10 @@
 "use client"
 import styles from './StyleButton.module.css'
-
+import React from 'react'
 export interface StyleButtonProps{
+    flagCondition:boolean;
 }
-
-function GeneringIdForAllDivs(FlagParent:boolean,someParents:Array<any>,IdPull:Array<string>){
+export function GeneringIdForAllDivs(FlagParent:boolean,someParents:Array<any>,IdPull:Array<string>){
     const body = document.getElementById('1');
     let someParentsActual = someParents;
     if (FlagParent){
@@ -50,9 +50,9 @@ function GeneringIdForAllDivs(FlagParent:boolean,someParents:Array<any>,IdPull:A
     
 }
 
-function ChangeTheme(key:string){
-    var someParent:Array<any> = []
-    var IdPull:Array<string> = []
+export function ChangeTheme(key:string){
+    const someParent:Array<any> = []
+    let IdPull:Array<string> = []
     IdPull = GeneringIdForAllDivs(false,someParent,IdPull)
     for (let i=0; i < IdPull.length; i++){
         let htmlElem = document.getElementById(String(IdPull[i]));
@@ -63,13 +63,19 @@ function ChangeTheme(key:string){
             htmlElem?.setAttribute('class',htmlElemClass.concat('Dark'))
         }
     }
+    if (document.getElementById('1')?.getAttribute('class')?.includes("Dark")){
+        localStorage.setItem('theme','Dark');
+    }else if (!document.getElementById('1')?.getAttribute('class')?.includes("Dark")){
+        localStorage.setItem('theme','Light');
+    }
 }
 
 export const StyleButton:React.FC<StyleButtonProps> = (props) => {
-    const {} = {...props} 
+    const {flagCondition} = {...props} 
+
     return(
         <div className={styles.changeButtonBlock}>
-            <button onClick={()=>{ChangeTheme('')}} className={styles.changeButton}>
+            <button onClick={()=>{ChangeTheme('')}} className={flagCondition ? styles.changeButtonDark : styles.changeButton}>
                 Change theme
             </button>
         </div>

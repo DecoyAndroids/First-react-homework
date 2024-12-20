@@ -4,6 +4,7 @@
     border-color: rgb(244, 242, 242);
     border-radius: 10px 10px 10px 10px;
     text-align: center;
+    white-space: nowrap;
     
 }
 .changeButton:hover{
@@ -19,6 +20,7 @@
     border-radius: 10px 10px 10px 10px;
     text-align: center;
     color:white;
+    white-space: nowrap;
     
 }
 .changeButtonDark:hover{
