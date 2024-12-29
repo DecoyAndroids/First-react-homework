@@ -2,6 +2,7 @@ import { Poster } from "./components/poster/poster"
 import { JoinData } from "./components/joinData/JoinData"
 import { Skills } from "./components/skills/Skills"
 import { StyleButton } from "./components/styleButton/StyleButton"
+import { UserCard } from "./components/userCard/UserCard"
 import * as types from "./types.module"
 import avatarDikovSrc from '../../public/avatar.jpg'
 import avatarDanilovSrc from '../../public/avatar2.jpg'
@@ -74,4 +75,25 @@ export const topMenuComponents:types.topMenuComponents = {
     StyleButton : StyleButton
 }
 
+export const usersData:Array<types.userInfo> = [
+    DikovInfo,DanilovInfo,KonovalovInfo,
 
+]
+
+export const userCardsComponents:types.userCardsComponents = {
+    UserCard: UserCard,
+    userCardComponents: userCardPageComponents,
+}
+// export function StyleCondition(){
+//     if (typeof window !== "undefined") {
+//         let theme = localStorage.getItem('theme')
+//         if ( theme == 'Dark'){
+//             var flagCondition = true
+//         }else{
+//             var flagCondition = false
+//         }
+//         console.log(flagCondition)
+//         return flagCondition
+        
+//     }
+// } 
