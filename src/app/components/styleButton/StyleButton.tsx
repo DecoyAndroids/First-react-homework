@@ -1,6 +1,8 @@
 "use client"
 import styles from './StyleButton.module.css'
-import React from 'react'
+import React,{ useContext }  from 'react'
+
+
 export interface StyleButtonProps{
     flagCondition:boolean;
 }
@@ -49,7 +51,6 @@ export function GeneringIdForAllDivs(FlagParent:boolean,someParents:Array<any>,I
     return IdPull
     
 }
-
 export function ChangeTheme(key:string){
     const someParent:Array<any> = []
     let IdPull:Array<string> = []
@@ -72,7 +73,6 @@ export function ChangeTheme(key:string){
 
 export const StyleButton:React.FC<StyleButtonProps> = (props) => {
     const {flagCondition} = {...props} 
-
     return(
         <div className={styles.changeButtonBlock}>
             <button onClick={()=>{ChangeTheme('')}} className={flagCondition ? styles.changeButtonDark : styles.changeButton}>

@@ -36,6 +36,6 @@ export type countryInfo = {
     capital: string,
     languages : Array<string>,
     population: number,
-    flag: string,
+    flag: StaticImageData,
     currency: string,
 }

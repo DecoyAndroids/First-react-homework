@@ -1,6 +1,9 @@
 'use client'
 import styles from './CountriesSelector.module.css'
 import * as types from "../../types.module"
+import { useState } from 'react'
+import Image from 'next/image'
+import {StaticImageData} from  'next/image'
 
 export interface CountriesSelectorProps{
     countriesInfo:Array<types.countryInfo>
@@ -18,61 +21,57 @@ function StyleCondition(){
         return flagCondition
     }
 } 
-function ChangeCountry(countriesInfo:Array<types.countryInfo>){
-    let keyWord = ['','Capital','language','Population','Currency']
-    let i = Math.floor(Math.random() * countriesInfo.length)
-    var countryInfoText = [countriesInfo[i]!.capital,countriesInfo[i]!.languages,countriesInfo[i]!.population,countriesInfo[i]!.currency]  
-    let countryInfo = document.getElementsByClassName('CountriesSelector-module__PjTAqW__CountriesSelectorBlock')
-    let Childrens = countryInfo[0]?.children
-    if (countryInfo.length == 0){
-        countryInfo = document.getElementsByClassName('CountriesSelector-module__PjTAqW__CountriesSelectorBlockDark')
-        Childrens = countryInfo[0]?.children
-    }
-    if (Childrens?.length){
-        for (let j = 0; j < Childrens.length; j++){
-            if (j==0){
-                let picAndCountryImg = Childrens[j]?.children
-                    picAndCountryImg![0]!.setAttribute('src',String(countriesInfo[i]?.flag))
-                    let countryName = picAndCountryImg![1]
-                    countryName!.innerHTML = `${countriesInfo[i]?.name}`
-                    
-            }else if (j!==5){
-                let a = Childrens[j]
-                a!.innerHTML = `<b>${keyWord[j]}:</b>  ${countryInfoText[j-1]}` 
-                  
-            }   
-        }
-    }
-}
-
 export const CountriesSelector: React.FC<CountriesSelectorProps> = (props) => {
     const {countriesInfo} = {...props}
+
+    function ChangeCountry(){
+        let i = Math.floor(Math.random() * countriesInfo.length)
+        let nextCountry:types.countryInfo ={
+            name:countriesInfo[i!]!.name,
+            capital:countriesInfo[i!]!.capital,
+            languages:countriesInfo[i!]!.languages,
+            population:countriesInfo[i!]!.population,
+            flag:countriesInfo[i!]!.flag,
+            currency:countriesInfo[i!]!.currency,
+        }
+        SetCountry(nextCountry)
+    }
+
     if (typeof window !== 'undefined'){
         var i = Math.floor(Math.random() * countriesInfo.length);
         var flagCondition = StyleCondition()
     }
-    
+
+    const [country,SetCountry] = useState<types.countryInfo>({
+        name: countriesInfo[i!]!.name,
+        capital:countriesInfo[i!]!.capital,
+        languages:countriesInfo[i!]!.languages,
+        population:countriesInfo[i!]!.population,
+        flag:countriesInfo[i!]!.flag,
+        currency:countriesInfo[i!]!.currency,
+    })
+
     return (
         <div className = {flagCondition ? styles.CountriesSelectorBlockDark : styles.CountriesSelectorBlock}>
             <div className={flagCondition ? styles.picAndCountryNameDark : styles.picAndCountryName}>
-                <img src={countriesInfo[i!]!.flag} width={241}height={241}alt ='countries flag' />
+                <Image src={country.flag} width={241}height={241}alt ='countrie`s flag' className={flagCondition ? styles.countryFlagDark : styles.countryFlag}/>
                 <p className={flagCondition ? styles.countryNameInfoDark : styles.countryNameInfo}>
-                    {countriesInfo[i!]!.name}
+                    {country.name}
                 </p>
             </div>
             <p className={flagCondition ? styles.countryInfoDark:styles.countryInfo}>
-                <b>Capital:</b> {countriesInfo[i!]!.capital}
+                <b>Capital : </b> {country.capital}
             </p>
             <p className={flagCondition ? styles.countryInfoDark:styles.countryInfo}>
-                <b>Language:</b> {countriesInfo[i!]!.languages}
+                <b>Language : </b> {country.languages}
             </p>
             <p className={flagCondition ? styles.countryInfoDark:styles.countryInfo}>
-                <b>Population:</b> {countriesInfo[i!]!.population}
+                <b>Population : </b> {country.population}
             </p>
             <p className={flagCondition ? styles.countryInfoDark:styles.countryInfo}>
-                <b>Currency:</b> {countriesInfo[i!]!.currency}
+                <b>Currency : </b> {country.currency}
             </p>
-            <button className={flagCondition ? styles.ChangeCountryButtonDark:styles.ChangeCountryButton} onClick={()=>{ChangeCountry(countriesInfo)}}>Next Country</button>
+            <button className={flagCondition ? styles.ChangeCountryButtonDark:styles.ChangeCountryButton} onClick={()=>{ChangeCountry()}}>Next Country</button>
         </div>
     );
 }
