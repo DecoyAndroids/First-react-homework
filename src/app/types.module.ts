@@ -1,6 +1,7 @@
 import { PosterProps } from "./components/poster/poster"
 import { SkillsProps } from "./components/skills/Skills"
 import { JoinDataProps } from "./components/joinData/JoinData"
+import { UserCardProps } from "./components/userCard/UserCard"
 import { StaticImageData } from "next/image"
 import { StyleButtonProps } from "./components/styleButton/StyleButton"
 export type skill = {
@@ -18,6 +19,10 @@ export type userInfo = {
     skills:Array<skill>
     data:string,
 }
+export type userCardsComponents = {
+    UserCard:React.FC<UserCardProps>,
+    userCardComponents : userCardComponents,
+}
 export type userCardComponents = {
     Poster: React.FC<PosterProps>,
     Skills: React.FC<SkillsProps>,
@@ -25,4 +30,12 @@ export type userCardComponents = {
 }
 export type topMenuComponents = {
     StyleButton: React.FC<StyleButtonProps>
+}
+export type countryInfo = {
+    name: string,
+    capital: string,
+    languages : Array<string>,
+    population: number,
+    flag: StaticImageData,
+    currency: string,
 }

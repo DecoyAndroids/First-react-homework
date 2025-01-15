@@ -13,11 +13,11 @@ export interface PosterProps{
 export const Poster: React.FC<PosterProps> = (props) => {
     const {avatarSrc,verificatedSrc,full_name,job_title,country} = {...props}
     return (
-        <div className = {styles.poster}>
+        <div className = {styles.poster }>
             <Image src={avatarSrc} 
                 width={241}
                 alt ='avatar of user' 
-                className={styles.avatar} />
+                className={styles.avatar } />
             <div className={styles.full_name}>  
                 {full_name} <Image src={verificatedSrc} width={24} alt ='point of verificate' className={styles.verificatedSrc} />
             </div>

@@ -4,7 +4,7 @@ import * as types from '../../types.module'
 
 export interface UserCardProps{
     userPageInfo:types.userInfo;
-    userCardPageComponents: types.userCardComponents 
+    userCardPageComponents: types.userCardComponents;
     
 }
 export const UserCard: React.FC<UserCardProps> = (props) => {
@@ -12,6 +12,7 @@ export const UserCard: React.FC<UserCardProps> = (props) => {
     const Poster = userCardPageComponents.Poster
     const Skills = userCardPageComponents.Skills
     const JoinData = userCardPageComponents.JoinData
+
     return (
         <div className={styles.main_block}>
         <Poster avatarSrc={userPageInfo.avatarSrc} verificatedSrc={userPageInfo.verificatedSrc}
