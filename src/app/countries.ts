@@ -67,7 +67,7 @@ export const countriesData:Array<types.countryInfo> = [
     currency: 'South Korean won',
   },
   {
-    name: 'United Kingdom of Great Britain and Northern Ireland',
+    name: 'United Kingdom of Great Britain',
     capital: 'London',
     languages: ['English'],
     population: 65110000,

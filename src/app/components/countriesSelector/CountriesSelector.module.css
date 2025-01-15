@@ -4,23 +4,23 @@
     row-gap: 0.8rem;
     margin:auto;
     margin-top:10px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     background-color: white;
     border-radius: 10px 10px 10px 10px;
     padding: 30px;
-    width: 60%;
+    width: 70%;
 }
 .CountriesSelectorBlockDark{ 
+    background-color: rgb(32, 32, 32);
     display: flex;
     flex-direction: column;
     row-gap: 0.8rem;
     margin:auto;
     margin-top:10px;
-    font-size: 1.3rem;
-    background-color: rgb(32, 32, 32);
+    font-size: 1.5rem;
     border-radius: 10px 10px 10px 10px;
     padding: 30px;
-    width: 60%;
+    width: 70%;
 }
 .picAndCountryName{
     display: flex;
@@ -28,6 +28,7 @@
     row-gap: 0.3rem;
     margin: auto;
     font-weight: 700;
+    font-size:2rem;
 }
 .picAndCountryNameDark{
     display: flex;
@@ -35,16 +36,18 @@
     row-gap: 0.3rem;
     margin: auto;
     font-weight: 700;
+    font-size:2rem;
 }
 .ChangeCountryButton{
     padding: 0.5rem 1rem;
-    background: rgb(231, 231, 231);
+    background: rgb(89, 175, 251);
     border-color: rgb(244, 242, 242);
     border-radius: 10px 10px 10px 10px;
     text-align: center;
     white-space: nowrap;
     margin: auto;
-    width: 12rem;
+    font-size:1.4rem;
+    width: 20rem;
 }
 .ChangeCountryButton:hover{
     cursor: pointer;
@@ -52,7 +55,7 @@
 
 .ChangeCountryButtonDark{
     padding: 0.5rem 1rem;
-    background: rgb(34, 34, 34);
+    background: rgba(4, 123, 227, 0.717);
     border-color: rgb(42, 42, 42);
     border-radius: 10px 10px 10px 10px;
     text-align: center;
@@ -60,6 +63,8 @@
     white-space: nowrap;
     margin: auto;
     width: 12rem;
+    font-size:1.4rem;
+    width: 20rem;
     
 }
 .ChangeCountryButtonDark:hover{

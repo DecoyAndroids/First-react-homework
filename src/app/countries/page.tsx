@@ -1,4 +1,4 @@
-import {UserCardsHolder} from '../components/userCardsHolder/UserCardsHolder'
+
 import {CountriesSelector} from '../components/countriesSelector/CountriesSelector'
 import * as data from '../countries'
 export const  CountriesPage = () => {

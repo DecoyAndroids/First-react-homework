@@ -19,10 +19,39 @@
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+.bodyDark div.UserCardWrapper > div  {
+  background-color: rgb(32, 32, 32);
+}
+.bodyDark div.UserCardWrapper > div > div > div > div {
+  background-color: rgb(6, 91, 131);
+}
+.bodyDark div.TopMenu > div {
+  background-color: rgb(32, 32, 32);
+}
 
-a {
-  color: inherit;
-  text-decoration: none;
+.bodyDark div.TopMenu > div > div > a > button{
+  background-color: rgb(32, 32, 32);
+  border-color: black;
+  color: hsla(0,0%,93%,1);
+}
+.bodyDark div.TopMenu > div > div > button {
+  background-color: rgb(32, 32, 32);
+  border-color: black;
+  color: hsla(0,0%,93%,1);
+}
+.bodyDark div.TopMenu > div > div > button:hover {
+  background-color: rgb(218, 218, 218);
+  color: black
+}
+
+.bodyDark div.page > div{
+  background-color: rgb(32, 32, 32);
+  color :  hsla(0,0%,93%,1)
+}
+.bodyDark div.page > div > button{
+  background-color: rgb(59, 92, 193);
+  border-color: black;
+  color:  hsla(0,0%,93%,1)
 }
 
 * {
