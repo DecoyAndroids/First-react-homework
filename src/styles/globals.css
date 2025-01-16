@@ -1,59 +1,79 @@
+:root {
+  --main-bg-color: rgb(218, 218, 218);
+  --main-bg-color-dark:  rgb(0,0,0);
+  --main-div-bg-color-dark : rgb(32, 32, 32);
+  --main-font-color-dark: hsla(0,0%,93%,1);
+}
 .html{
-  background-color: rgb(218, 218, 218);
+  background-color: var(--main-bg-color);
 }
 .htmlDark{
-  background-color: rgb(0,0,0);
+  background-color: var(--main-bg-color-dark);
 }
 .body {
-  background-color: rgb(218, 218, 218);
+  background-color: var(--main-bg-color);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .bodyDark{
-  background-color: rgb(0,0,0);
-  color: hsla(0,0%,93%,1);
+  background-color: var(--main-bg-color-dark);
+  color: var(--main-font-color-dark);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .bodyDark div.UserCardWrapper > div  {
-  background-color: rgb(32, 32, 32);
+  background-color: var(--main-div-bg-color-dark);
 }
 .bodyDark div.UserCardWrapper > div > div > div > div {
   background-color: rgb(6, 91, 131);
 }
 .bodyDark div.TopMenu > div {
-  background-color: rgb(32, 32, 32);
+  background-color: var(--main-div-bg-color-dark);
 }
-
 .bodyDark div.TopMenu > div > div > a > button{
-  background-color: rgb(32, 32, 32);
+  background-color: var(--main-div-bg-color-dark);
   border-color: black;
   color: hsla(0,0%,93%,1);
 }
-.bodyDark div.TopMenu > div > div > button {
-  background-color: rgb(32, 32, 32);
+.bodyDark div.TopMenu > div > div > div > button {
+  background-color: var(--main-div-bg-color-dark);
   border-color: black;
   color: hsla(0,0%,93%,1);
 }
-.bodyDark div.TopMenu > div > div > button:hover {
-  background-color: rgb(218, 218, 218);
+.bodyDark div.TopMenu > div > div > div > button:hover {
+  background-color: var(--main-bg-color);
   color: black
 }
 
 .bodyDark div.page > div{
-  background-color: rgb(32, 32, 32);
-  color :  hsla(0,0%,93%,1)
+  background-color: var(--main-div-bg-color-dark);
+  color :  var(--main-font-color-dark)
 }
 .bodyDark div.page > div > button{
   background-color: rgb(59, 92, 193);
   border-color: black;
-  color:  hsla(0,0%,93%,1)
+  color:  var(--main-font-color-dark)
 }
 
 * {
   box-sizing: border-box;
+}
+
+.bodyDark div.page > div > form{
+  background-color: rgb(27, 27, 27);
+}
+.bodyDark div.page > div > form > input{
+  background-color: rgb(58, 58, 58);
+  color: var(--main-font-color-dark)
+}
+.bodyDark div.page > div > form > div > input{
+  accent-color: #232323;
+}
+.bodyDark div.page > div > form > textarea{
+  background-color: rgb(58, 58, 58);
+  color: var(--main-font-color-dark)
 }
