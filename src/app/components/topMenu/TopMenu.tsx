@@ -24,7 +24,14 @@ export const TopMenu: React.FC<TopMenuProps> = (props) => {
                     </button>
                 </Link>
             </div>
-            <StyleButton/>
+            <div className={styles.rightPartTopMenu}>
+                <StyleButton/>
+                <Link href='/feedbackform'>    
+                    <button className={styles.link}>    
+                        Contact Us
+                    </button>
+                </Link>
+            </div>
         </div>
         </div>
     );

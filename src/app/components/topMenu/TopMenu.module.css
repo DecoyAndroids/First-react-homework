@@ -59,4 +59,9 @@
     background: rgb(34, 34, 34);
     color:aliceblue;
 }
+.rightPartTopMenu{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+}
 

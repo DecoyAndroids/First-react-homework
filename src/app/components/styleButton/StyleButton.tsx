@@ -1,7 +1,6 @@
 "use client"
 import styles from './StyleButton.module.css'
-import React,{ useContext }  from 'react'
-import { useState } from 'react'
+import React  from 'react'
 
 export interface StyleButtonProps{
 }
@@ -26,13 +25,12 @@ export const StyleButton:React.FC<StyleButtonProps> = (props) => {
         if (theme == 'Dark'){
             bodyHtml?.setAttribute('class','bodyDark')
         }
-        console.log(theme)
     }
 
-    if (typeof window !== 'undefined'){
+    if (typeof document !== 'undefined'){
         ChangeThemeOnloadPage()
     }
-  
+    
     return(
         <div className={styles.changeButtonBlock}>
             <button onClick={()=>{ChangeTheme()}} className={styles.changeButton}>
